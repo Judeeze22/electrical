@@ -4,11 +4,18 @@ body{
 }
 .general{
     display:flex;
-    background: rgb(204, 46, 138);
+    background: rgb(238, 225, 232);
     height:fit-content;
 }
 .logo{
-    width:4%;
+    width:5%;
+    margin-left: 90%;
+
+}
+.logomediascreen{
+    display: none;
+    width: 70%;
+    border-radius: 50%;
 }
 .left{
     flex-basis:20%;
@@ -34,8 +41,16 @@ body{
     background: white;
     align-items: center;
 }
-
-   
+.middle-container h3{
+    color: purple;
+    font-size: 33px;
+    margin-top:0;
+}
+.danger{
+    color: gold;
+    font-size: 33px;
+    
+  } 
 
 .close-left{
     background: rgb(50, 205, 102);
@@ -98,7 +113,8 @@ body{
 }
 .right{
     flex-basis:20%;
-    background: rgb(187, 74, 74);
+    background: rgba(211, 214, 209, 0.932);
+    height: fit-content;
     }
 
 .right a{
@@ -116,22 +132,31 @@ body{
     position: sticky;
     top:0;
     height: 70px;
+    background-image: url(https://bit.ly/3ezyYjr);
     
 }
 .header-left{
-    flex-basis:100%;
+    flex-basis:10%;
     background-color: #f1e9f8;
+    background-image: url(https://bit.ly/3ezyYjr);
+
+}
+.header-left h1{
+    color: green;
 }
 .header-left i{
     font-size: 30px;
 }
 .header-middle{
     flex-basis:100%;
+    background-image: url(https://bit.ly/3gf20p2);
+    height: 100%;
 }
 .header-right{
     flex-basis:100%;
     background-color: rgb(238, 238, 231);
-    height: 40px;
+    height:100% ;
+    display: none;
 }
 .header-right i{
     margin-left: 90%;
@@ -215,15 +240,30 @@ body{
         flex-basis: 90%;
         
     }
+    .middle-container h3{
+        color: purple;
+        font-size: 22px;
+    }
+    .danger{
+        color: gold;
+        font-size: 22px;
+        
+      } 
     .close-left{
         display: block;
         
     }
     .right{
         display: none;
+        background-color: aliceblue;
+    }
+    .right a{
+        gap:2rems;
     }
     .close-right{
-        display:block
+        display:block;
+        width:unset;
+        
     }
     .footer2{
         display: flex;
@@ -254,11 +294,21 @@ body{
     
 
    }
+   .header-right{
+    display: block;
+    background-image: url(https://bit.ly/3gf20p2);
+   }
    .header-left i{
     display: block;
     padding: 8px;
 }
 .header-right i{
+    display: block;
+}
+.header-middle{
+    display: none;
+}
+.logomediascreen{
     display: block;
 }
 .dd{
