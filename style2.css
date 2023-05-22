@@ -1,7 +1,49 @@
-body{
+.body{
     margin:0;
     padding:0;
+    font-family: Arial, sans-serif;
 }
+
+  
+  .container {
+    max-width: 600px;
+    margin: 40px auto;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  h2 {
+    text-align: center;
+  }
+  
+  form {
+    margin-top: 20px;
+  }
+  
+  input,
+  textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  button {
+    width: 100%;
+    padding: 10px;
+    background-color: #4caf50;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background-color: #45a049;
+  }
+ 
 .general{
     display:flex;
     background: rgb(238, 225, 232);
@@ -18,42 +60,89 @@ body{
     border-radius: 50%;
 }
 .left{
-    flex-basis:20%;
-    background: rgb(50, 205, 102);
-    align-items: center;
+    flex-basis:10%;
+    background: green;
+   text-align: center;
     display: flex;
     flex-direction: column;
-    margin: 0;
-    align-items:center;
-    transition:all 300ms ease;
-    justify-content: center;
+    margin: 0px;
+   height: fit-content;
+    width: fit-content;
+    z-index: 2;
+    
+
+}
+.left h3{
+    color: white;
+}
+.left h3:hover{
+    color:orangered;
+    cursor:pointer;
 }
 .left a{
+    color: white;
     display: flex;
     flex-direction: row;
-    gap:3rem;
+    gap:1rem;
     position:sticky;
     align-items: center;
     margin-left: 2px;
-}
-.middle{
-    flex-basis: 100%;
-    background: white;
-    align-items: center;
-}
-.middle-container h3{
-    color: purple;
-    font-size: 33px;
-    margin-top:0;
-}
-.danger{
-    color: gold;
-    font-size: 33px;
+    text-decoration: none;
+    cursor:-webkit-grabbing;
     
-  } 
+}
+.h5{
+    color: orange;
+    background-color: black;
+}
+
+
+.middle{
+    flex-basis:100% ;
+    background: white;
+    text-align: center;
+    padding: 30px 40px;
+}
+.middle h1{
+    color: green;
+}
+#trans{
+    display: none;
+    text-align: center;
+}
+#close-trans{
+    display: none;
+    background-color: green;
+    margin-left: 50%;
+    width: 90px;
+}
+.trans-image{
+    width: fit-content;
+}
+#wiring2{
+    display: none;
+    text-align: center;
+}
+#close-wiring{
+    display: none;
+    margin-left: 50%;
+    background-color: green;
+    width: 90px;
+}
+#supply{
+    display: none;
+}
+#close-supply{
+    display: none;
+    width: 99px;
+    margin-left: 90px;
+    background-color: green;
+}
+
+
 
 .close-left{
-    background: rgb(50, 205, 102);
+    background:green;
     margin-top: 0;
     padding: 0;
     height: 8px;
@@ -72,7 +161,7 @@ body{
 .remove{
     width:0%;
     height: 100%;
-    background-color: rgba(245, 25, 25, 0.808);
+    background-color: rgba(25, 245, 73, 0.808);
     border-radius: 50%;
     text-align: center;
     font-size:50px;
@@ -100,22 +189,27 @@ body{
 
 
 
-.middle-container a{
-    display: flex;
-    flex-direction: row;
-    margin-left: 2rem;
-    gap:3rem;
-    position:relaive;
-   align-items:center;
-    
 
 
-}
+
+
 .right{
-    flex-basis:20%;
-    background: rgba(211, 214, 209, 0.932);
+    flex-basis:10%;
+    background-color: green;
+    text-align: center;
+    position:relative;
+    margin: 2px;
+    padding: 9PX;
     height: fit-content;
-    }
+    width: 50%;
+ }
+.right h3{
+    color: rgb(58, 7, 7);
+    text-decoration:solid;
+}
+.right h3:hover{
+    color: orangered;
+}    
 
 .right a{
     display: flex;
@@ -222,12 +316,19 @@ body{
 .header-left i{
     display: none;
 }
+.logomain{
+    width:100%;
+}
+
 
 
 @media only screen and (max-width:480px) {
     .general{
         display: flexbox;
     }
+    .container {
+        padding: 10px;
+     }
     .header-left h1{
         display: none;
     }
@@ -238,6 +339,8 @@ body{
     .left{
         display: none;
         flex-basis: 90%;
+        position: fixed;
+        width: 50%;
         
     }
     .middle-container h3{
@@ -245,8 +348,8 @@ body{
         font-size: 22px;
     }
     .danger{
-        color: gold;
-        font-size: 22px;
+        color: rgb(31, 17, 158);
+        
         
       } 
     .close-left{
@@ -256,6 +359,7 @@ body{
     .right{
         display: none;
         background-color: aliceblue;
+        position: fixed;
     }
     .right a{
         gap:2rems;
@@ -314,7 +418,9 @@ body{
 .dd{
     display: block;
 }
-.all{
+/*.all{
     justify-content: center;
 }
+*/
+
 }
