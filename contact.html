@@ -69,20 +69,28 @@
    
         </div>
      <div class="middle">
-        <div class="middle-container">
-            <marquee> <a href="#">
+         <div class="middle-container">
+                  <marquee> <a href="#">
             
-               <h3><b>God-Given Electrical Company <span class="danger">Contact us for installation, wiring and sponsorship</span></b></h3>
-            </a></marquee> 
-            <div class="container">
-                <h2>Contact Us</h2>
-                <form id="contactForm" action="#" method="post">
-                  <input type="text" id="name" placeholder="Your Name" required>
-                  <input type="email" id="email" placeholder="Your Email" required>
-                  <textarea id="message" placeholder="Your Message" required></textarea>
-                  <button type="submit">Send Message</button>
-                </form>
-              </div> 
+                                 <h3><b>God-Given Electrical Company <span class="danger">Contact us for installation, wiring and sponsorship</span></b></h3>
+                                    </a></marquee> 
+                  <div class="container">
+                      <h2>Contact Us</h2>
+                      <form action="https://formspree.io/f/xyyaajzn" method="post" onsubmit="sendemail(); reset(); return false;">
+                        <label>
+                      
+                      <input placeholder="email" type="email" name="email">
+                       </label>
+                    
+                        <label>
+                    
+                      <textarea name="message" placeholder="how may we help you"></textarea>
+                         </label>
+                       <!-- your other form fields go here -->
+                       <input type="name" id="name" placeholder="Enter name">
+                        <button type="submit">Send</button>
+                        </form>
+                  </div> 
 
          </div>     
      </div>
@@ -144,7 +152,28 @@
     </div>
   </div>
 </div>
-<script src="app.js"></script>
+<script src="https://smtpjs.com/v3/smtp.js"></script>
+
+
+    <script>
+        function sendemail(){
+            Email.send({
+                Host : "smtp.gmail.com",
+                Username : "judesaint812@gmail.com",
+                Password : "93237B32D2413420DD24A0DD8D9D20706155",
+               
+                To : 'judesaint812@gmail.com',
+                From : document.getElementById("email").value,
+                Subject : "Hello you have new meassage",
+                Body : "Name:" + document.getElementById("name").value
+                        + "<br> email:" + document.getElementById("email").value
+                        + "<br> message:" + document.getElementById("message").value, 
+            }).then(
+              message => alert("sent succesfully")
+            );
+        }
+    </script>
+    
 <h4>All right reserved to God-Given Electrical Company limited</h4>
 </body>
 </html>
