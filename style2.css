@@ -2,35 +2,28 @@
     margin:0;
     padding:0;
     font-family: Arial, sans-serif;
+    align-items: center;
+    
+}
+#submitbutton{
+    background-color: #ad820b;
+    color: white;
+    outline: 2px solid yellow;
+}
+#submitbutton:hover{
+    background-color: green;
+    cursor: pointer;
+}
+#contact-form{
+    display: flex;
+    flex-direction: column;
 }
 
   
-  .container {
-    max-width: 600px;
-    margin: 40px auto;
-    padding: 20px;
-    background-color: #fff;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  }
+
   
-  h2 {
-    text-align: center;
-  }
-  
-  form {
-    margin-top: 20px;
-  }
-  
-  input,
-  textarea {
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 10px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-  }
-  
-  button {
+ 
+.button {
     width: 100%;
     padding: 10px;
     background-color: #4caf50;
@@ -40,7 +33,7 @@
     cursor: pointer;
   }
   
-  button:hover {
+.button:hover {
     background-color: #45a049;
   }
  
@@ -88,8 +81,7 @@
     align-items: center;
     margin-left: 2px;
     text-decoration: none;
-    cursor:-webkit-grabbing;
-    
+    cursor:pointer;
 }
 .h5{
     color: orange;
@@ -117,7 +109,7 @@
     width: 90px;
 }
 .trans-image{
-    width: fit-content;
+    width: 99%;
 }
 #wiring2{
     display: none;
@@ -166,22 +158,16 @@
     text-align: center;
     font-size:50px;
     margin-left: 10%;
+    
 
     }
-    .remove2{
-        width:0%;
-        height: 100%;
-        background-color: rgba(245, 25, 25, 0.808);
-        border-radius: 50%;
-        text-align: center;
-        font-size:50px;
-        margin-left: 80%;
+
     
-    }
+    
     
 .dd{
     width: 3px;
-    display: block;
+    
     
 }
 
@@ -198,14 +184,15 @@
     background-color: green;
     text-align: center;
     position:relative;
-    margin: 2px;
+
     padding: 9PX;
     height: fit-content;
     width: 50%;
  }
 .right h3{
-    color: rgb(58, 7, 7);
+    color: white;
     text-decoration:solid;
+    font-weight: 900;
 }
 .right h3:hover{
     color: orangered;
@@ -319,12 +306,38 @@
 .logomain{
     width:100%;
 }
+#privacy{
+    text-align: center;
+    color: rgb(19, 30, 182);    }
+
+.image-container1{
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        text-align: center;
+    }
+.image-container1-i{
+    flex-basis: 36%;
+    overflow: none;
+    grid-row-end: auto;
+}
 
 
 
 @media only screen and (max-width:480px) {
     .general{
         display: flexbox;
+    }
+    .middle{
+        text-align: center;
+        width: 100%;
+    }
+    #privacy{
+        text-align: center;
+        color: rgb(4, 0, 255);
+        overflow: scroll;
+        
+        
     }
     .container {
         padding: 10px;
@@ -360,7 +373,14 @@
         display: none;
         background-color: aliceblue;
         position: fixed;
+        margin-left: 60%;
+        border: 2px solid red;
     }
+    .right h3{
+        color: rgb(138, 25, 25);
+        text-decoration:solid;
+        font-weight: 900;
+      }
     .right a{
         gap:2rems;
     }
@@ -377,6 +397,7 @@
         width: 100%;
         margin: 0;
         padding: 0;
+        background-color: violet;
     }
     .footer2-left{
         margin-left:2%;
@@ -397,30 +418,66 @@
         margin: 5px;
     
 
-   }
+       }
    .header-right{
     display: block;
     background-image: url(https://bit.ly/3gf20p2);
-   }
+       }
    .header-left i{
     display: block;
     padding: 8px;
+      }
+    .header-right i{
+      display: block;
+      }
+    .header-middle{
+      display: none;
 }
-.header-right i{
+   .logomediascreen{
+      display: block;
+      }
+   .dd{
     display: block;
-}
-.header-middle{
-    display: none;
-}
-.logomediascreen{
-    display: block;
-}
-.dd{
-    display: block;
-}
-/*.all{
-    justify-content: center;
-}
-*/
 
+    }
+
+.footer2-left ul li a, .footer2-middle ul li a, .footer2-right {
+    color: yellow;
+    font-size: 20px;
+    text-decoration: none;
+    text-align: center;
+}
+.remove2{
+    font-size: 54px;
+    margin-left: 70%;
+    cursor: pointer;
+    color:red;
+    font-weight: 900;
+
+}
+.remove{
+    color: red;
+    font-weight: 900;
+    cursor: pointer;
+}
+.image-container1{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+.footer2-middle h2, .footer2-right h2{
+    font-size: 20px;
+    font-weight: 900;
+    color: green;
+    font-style: italic;
+}
+.reserve{
+    text-align: center;
+}
+.reserve h4{
+    color:red;
+    font-size: 9px;
+    text-align: center;
+}
 }
